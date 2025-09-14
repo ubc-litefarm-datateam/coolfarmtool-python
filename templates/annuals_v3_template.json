@@ -1,0 +1,278 @@
+{
+  "pathway": "Annuals v3",
+  "inputData": {
+    "cropDetails": {
+      "soilType": "Fine",
+      "assessmentYear": 2024,
+      "sandPercentage": 4,
+      "cropType": "Alfalfa",
+      "area": {
+        "value": 1000,
+        "unit": "hectares"
+      },
+      "cropYield": {
+        "value": 1000,
+        "unit": "tonnes"
+      },
+      "farmGate": {
+        "value": 500,
+        "unit": "tonnes"
+      }
+    },
+    "residue": {
+      "residueManagementPractice": "burning",
+      "aboveGroundResidue": {
+        "residueAGManual": {
+          "value": 1000,
+          "unit": "kg per hectare"
+        }
+      }
+    },
+    "transport": {
+      "transports": [
+        {
+          "mode": "ship large container vessel (2,000+ TEU)",
+          "weight": {
+            "value": 100,
+            "unit": "tonnes"
+          },
+          "distance": {
+            "value": 200,
+            "unit": "km"
+          },
+          "boundary": "Within farm operations",
+          "label": "Transport example"
+        }
+      ]
+    },
+    "fertiliser": {
+      "fertilisers": [
+        {
+          "predefinedFertiliserType": "Horse manure - 0.5% N",
+          "predefinedEmissionFactorRegionKey": "Default",
+          "predefinedApplicationRate": {
+            "value": 73,
+            "unit": "kg per hectare"
+          }
+        }
+      ]
+    },
+    "fuelEnergy": {
+      "usages": [
+        {
+          "byVolumeEnergySource": "diesel (100% mineral diesel)",
+          "byVolumeEnergyUsed": {
+            "value": 100,
+            "unit": "litres"
+          },
+          "byVolumeEnergyBoundary": "Incoming to farm for on-farm use",
+          "byVolumeCategory": "Field"
+        }
+      ]
+    },
+    "wasteWater": {
+      "treatments": [
+        {
+          "oxygenDemandType": "Biochemical",
+          "treatmentProcess": "Anaerobic reactor",
+          "wasteWaterVolume": {
+            "value": 10,
+            "unit": "cubic metres"
+          },
+          "oxygenDemand": {
+            "value": 0.009,
+            "unit": "kg per litre"
+          }
+        }
+      ]
+    },
+    "machinery": {
+      "machineryUse": [
+        {
+          "machine": "Baler",
+          "fuelUse": "diesel (average biofuel blend)",
+          "numberMachineryOperations": 5
+        }
+      ]
+    },
+    "irrigation": {
+      "events": [
+        {
+          "irrigationCalcMethod": {
+            "volumeOnlyWaterAdded": {
+              "depth": {
+                "value": 1000,
+                "unit": "mm"
+              }
+            }
+          },
+          "irrigationMethod": "Centre pivot",
+          "waterSource": "Natural lake/pond",
+          "powerSource": "Electric",
+          "areaIrrigatedPercentage": 100
+        }
+      ]
+    },
+    "pesticide": {
+      "applications": [
+        {
+          "category": "Soil treatment",
+          "type": "Pesticide",
+          "fieldApplicationPercentage": 100,
+          "applicationRate": {
+            "value": 5,
+            "unit": "kg per hectare"
+          },
+          "activeIngredientPercentage": 10
+        }
+      ]
+    },
+    "steadyStateSoc": {
+      "landUseHistory": {
+        "assessmentYear": {
+          "tillage": "No till",
+          "irrigation": "None",
+          "practices": {
+            "coverCrop": [
+              {
+                "species": "Black oats",
+                "percentageCoverage": 60,
+                "height": {
+                  "value": 1,
+                  "unit": "m"
+                },
+                "biomassLeftInFieldPercentage": 5,
+                "biomassLeftInFieldManagement": "left_on_field",
+                "biomassRemovedFromFieldManagement": "left_in_heaps_or_pits"
+              }
+            ]
+          }
+        },
+        "historicData": {
+          "defaultDataUsageOption": "I know at least 5 years of detailed land management history (manual)",
+          "historicDataItems": [
+            {
+              "tillage": "No till",
+              "irrigation": "None",
+              "startYear": 2019,
+              "endYear": 2023,
+              "cropClass": "Annual",
+              "cropType": "Maize",
+              "cropYield": {
+                "value": 1000,
+                "unit": "kg per hectare"
+              },
+              "residuesLeftOnField": true,
+              "practices": {
+                "organicInput": [
+                  {
+                    "organicInputType": "Cattle digestate - 0.26% N",
+                    "amount": {
+                      "value": 10000,
+                      "unit": "kg per hectare"
+                    }
+                  }
+                ],
+                "coverCrop": [
+                  {
+                    "species": "Black oats",
+                    "percentageCoverage": 60,
+                    "height": {
+                      "value": 1,
+                      "unit": "m"
+                    },
+                    "biomassLeftInFieldPercentage": 5,
+                    "biomassLeftInFieldManagement": "left_on_field",
+                    "biomassRemovedFromFieldManagement": "left_in_heaps_or_pits"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "nonCrop": {
+      "intercrops": [
+        {
+          "type": "Avocado",
+          "plantingDensity": {
+            "value": 500,
+            "unit": "per hectare"
+          },
+          "percentageOccupied": 1
+        }
+      ],
+      "shadeTrees": [
+        {
+          "type": "Temperate conifers",
+          "plantingDensity": {
+            "value": 500,
+            "unit": "per hectare"
+          },
+          "percentageOccupied": 5
+        }
+      ],
+      "hedges": [
+        {
+          "type": "Maple",
+          "width": {
+            "value": 1,
+            "unit": "m"
+          },
+          "length": {
+            "value": 1,
+            "unit": "m"
+          }
+        }
+      ]
+    },
+    "landUseChangeBiomass": {
+      "forestChanges": {
+        "forestType": "boreal coniferous forest",
+        "affectedArea": {
+          "value": 100,
+          "unit": "hectares"
+        },
+        "yearsSinceLUC": 10
+      }
+    },
+    "refrigerants": {
+      "equipments": [
+        {
+          "subapplication": "Chillers",
+          "unitCount": 5,
+          "equipmentEOL": true,
+          "refrigerant": "R-410A",
+          "refrigerantRecoveryType": "Partial refrigerant recovery",
+          "unitAge": 9,
+          "maxRefrigerantWeight": {
+            "value": 5,
+            "unit": "kg"
+          },
+          "actualRefrigerantWeight": {
+            "value": 1,
+            "unit": "kg"
+          },
+          "allocationMethod": "Economic",
+          "allocationPercentage": 50
+        }
+      ]
+    },
+    "seedProduction": {
+      "seedBought": null
+    }
+  },
+  "farmDetails": {
+    "country": "United Kingdom of Great Britain and Northern Ireland",
+    "latitude": 51.28,
+    "longitude": 0.52,
+    "climate": "Cool Temperate Moist",
+    "soilCharacteristic": "High activity clay",
+    "annualAverageTemperature": {
+      "value": 20,
+      "unit": "\u00b0C"
+    }
+  },
+  "farmIdentifier": "farm_01"
+}

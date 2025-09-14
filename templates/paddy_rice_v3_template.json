@@ -1,0 +1,342 @@
+{
+  "pathway": "Paddy Rice v3",
+  "inputData": {
+    "cropDetails": {
+      "cropType": "Rice",
+      "soilType": "Medium",
+      "assessmentYear": 2024,
+      "cultivationWaterRegime": "Continuously flooded",
+      "area": {
+        "value": 1,
+        "unit": "hectares"
+      },
+      "cropYield": {
+        "value": 5,
+        "unit": "tonnes"
+      },
+      "farmGate": {
+        "value": 5,
+        "unit": "tonnes"
+      }
+    },
+    "residue": {
+      "residueManagementPractice": "burning",
+      "aboveGroundResidue": {
+        "residueAGManual": {
+          "value": 1000,
+          "unit": "kg per hectare"
+        }
+      }
+    },
+    "paddy": {
+      "preseasonWaterRegime": "Not flooded pre-season (for < 180 days)",
+      "useDefaultCultivationPeriod": true,
+      "OAInput": {
+        "OAs": [
+          {
+            "OAType": "Straw incorporated shortly (< 30days) before cultivation",
+            "OARate": {
+              "value": 1,
+              "unit": "tonnes per hectare"
+            }
+          }
+        ]
+      },
+      "timeUnderCultivation": {
+        "value": 180,
+        "unit": "day"
+      }
+    },
+    "pesticide": {
+      "applications": [
+        {
+          "category": "Soil treatment",
+          "type": "Herbicide",
+          "fieldApplicationPercentage": 100,
+          "activeIngredientPercentage": 50,
+          "applicationRate": {
+            "value": 500,
+            "unit": "kg per hectare"
+          }
+        }
+      ]
+    },
+    "fertiliser": {
+      "fertilisers": [
+        {
+          "predefinedFertiliserType": "Ammonium nitrate - 33.5% N (granulated)",
+          "predefinedEmissionFactorRegionKey": "Africa 2014",
+          "predefinedApplicationRate": {
+            "value": 1,
+            "unit": "tonnes per hectare"
+          },
+          "predefinedDateOfApplication": "2024-05-21",
+          "predefinedNitrificationInhibitorUsed": true
+        },
+        {
+          "cyoEmissionFactorRegionKey": "Europe 2014",
+          "cyoNAsAmmoniumNPercentage": 30,
+          "cyoNAsNitrateNPercentage": 20,
+          "cyoNAsUreaNPercentage": 10,
+          "cyoP2o5Percentage": 10,
+          "cyoK2oPercentage": 10,
+          "cyoOtherPercentage": 20,
+          "cyoApplicationRate": {
+            "value": 1,
+            "unit": "tonnes per hectare"
+          },
+          "cyoDateOfApplication": "2024-05-21",
+          "cyoNitrificationInhibitorUsed": true
+        }
+      ]
+    },
+    "SOC": {
+      "changes": [
+        {
+          "year": 2015,
+          "fromState": {
+            "inputs": "Medium",
+            "tillage": "no-till",
+            "landUse": "native"
+          },
+          "toState": {
+            "inputs": "Medium",
+            "tillage": "full",
+            "landUse": "paddy"
+          },
+          "appliedToFieldPercentage": 100
+        }
+      ]
+    },
+    "fuelEnergy": {
+      "usages": [
+        {
+          "byVolumeEnergySource": "diesel (average biofuel blend)",
+          "byVolumeEnergyUsed": {
+            "value": 1,
+            "unit": "cubic metres"
+          },
+          "byVolumeEnergyBoundary": "Incoming to farm for on-farm use",
+          "byVolumeCategory": "Field"
+        },
+        {
+          "byWeightEnergySource": "gas (by weight)",
+          "byWeightEnergyUsed": {
+            "value": 1,
+            "unit": "tonnes"
+          },
+          "byWeightEnergyBoundary": "Within farm operations",
+          "byWeightCategory": "Facility (processing)"
+        },
+        {
+          "byEnergyEnergySource": "grid electricity",
+          "byEnergyEnergyUsed": {
+            "value": 1,
+            "unit": "kWh"
+          },
+          "byEnergyEnergyBoundary": "Dispatched from farm",
+          "byEnergyCategory": "Facility (processing)"
+        }
+      ]
+    },
+    "irrigation": {
+      "events": [
+        {
+          "irrigationMethod": "Centre pivot",
+          "waterSource": "Reservoir",
+          "powerSource": "Electric",
+          "areaIrrigatedPercentage": 100,
+          "irrigationCalcMethod": {
+            "volumeOnlyWaterAdded": {
+              "volume": {
+                "value": 1000,
+                "unit": "cubic metres"
+              }
+            }
+          }
+        },
+        {
+          "irrigationMethod": "Centre pivot",
+          "waterSource": "Reservoir",
+          "powerSource": "Electric",
+          "areaIrrigatedPercentage": 100,
+          "irrigationCalcMethod": {
+            "volumeOnlyWaterAdded": {
+              "depth": {
+                "value": 10,
+                "unit": "mm"
+              }
+            }
+          }
+        },
+        {
+          "irrigationMethod": "Centre pivot",
+          "waterSource": "Reservoir",
+          "powerSource": "Electric",
+          "areaIrrigatedPercentage": 100,
+          "irrigationCalcMethod": {
+            "volumePumpingDepthDistanceWaterAdded": {
+              "volume": {
+                "value": 1000,
+                "unit": "cubic metres"
+              }
+            },
+            "pumpingDepth": {
+              "value": 10,
+              "unit": "m"
+            },
+            "horizontalDistance": {
+              "value": 1,
+              "unit": "km"
+            }
+          }
+        },
+        {
+          "irrigationMethod": "Centre pivot",
+          "waterSource": "Reservoir",
+          "powerSource": "Electric",
+          "areaIrrigatedPercentage": 100,
+          "irrigationCalcMethod": {
+            "volumePumpingDepthDistanceWaterAdded": {
+              "depth": {
+                "value": 10,
+                "unit": "mm"
+              }
+            },
+            "pumpingDepth": {
+              "value": 10,
+              "unit": "m"
+            },
+            "horizontalDistance": {
+              "value": 1,
+              "unit": "km"
+            }
+          }
+        }
+      ]
+    },
+    "machinery": {
+      "machineryUse": [
+        {
+          "machine": "Manure spreader",
+          "fuelUse": "diesel (average biofuel blend)",
+          "numberMachineryOperations": 10,
+          "label": "Lots of manure spreading throughout the year"
+        }
+      ]
+    },
+    "transport": {
+      "transports": [
+        {
+          "mode": "road HGV (average heavy goods vehicle)",
+          "boundary": "Dispatched from farm",
+          "label": "Test transport",
+          "weight": {
+            "value": 100,
+            "unit": "tonnes"
+          },
+          "distance": {
+            "value": 200,
+            "unit": "km"
+          }
+        }
+      ]
+    },
+    "wasteWater": {
+      "treatments": [
+        {
+          "oxygenDemandType": "Biochemical",
+          "treatmentProcess": "Anaerobic reactor",
+          "wasteWaterVolume": {
+            "value": 10,
+            "unit": "cubic metres"
+          },
+          "oxygenDemand": {
+            "value": 0.009,
+            "unit": "kg per litre"
+          }
+        }
+      ]
+    },
+    "refrigerants": {
+      "equipments": [
+        {
+          "subapplication": "Chillers",
+          "unitCount": 5,
+          "equipmentEOL": true,
+          "refrigerant": "R-410A",
+          "refrigerantRecoveryType": "Partial refrigerant recovery",
+          "unitAge": 9,
+          "maxRefrigerantWeight": {
+            "value": 5,
+            "unit": "kg"
+          },
+          "actualRefrigerantWeight": {
+            "value": 1,
+            "unit": "kg"
+          }
+        }
+      ]
+    },
+    "nonCrop": {
+      "intercrops": [
+        {
+          "type": "Avocado",
+          "plantingDensity": {
+            "value": 500,
+            "unit": "per hectare"
+          },
+          "percentageOccupied": 1
+        }
+      ],
+      "shadeTrees": [
+        {
+          "type": "Temperate conifers",
+          "plantingDensity": {
+            "value": 500,
+            "unit": "per hectare"
+          },
+          "percentageOccupied": 5
+        }
+      ],
+      "hedges": [
+        {
+          "type": "Maple",
+          "width": {
+            "value": 1,
+            "unit": "m"
+          },
+          "length": {
+            "value": 1,
+            "unit": "m"
+          }
+        }
+      ]
+    },
+    "landUseChangeBiomass": {
+      "forestChanges": {
+        "forestType": "boreal coniferous forest",
+        "affectedArea": {
+          "value": 0.1,
+          "unit": "hectares"
+        },
+        "yearsSinceLUC": 10
+      }
+    },
+    "seedProduction": {
+      "seedBought": null
+    }
+  },
+  "farmDetails": {
+    "country": "United Kingdom of Great Britain and Northern Ireland",
+    "latitude": 51.28,
+    "longitude": 0.52,
+    "climate": "Cool Temperate Moist",
+    "soilCharacteristic": "High activity clay",
+    "annualAverageTemperature": {
+      "value": 10,
+      "unit": "°C"
+    }
+  },
+  "farmIdentifier": "farm_01"
+}
